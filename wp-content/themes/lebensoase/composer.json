@@ -1,0 +1,12 @@
+{
+    "name": "marci/lebensoase",
+    "require": {
+        "twbs/bootstrap": "^4.6"
+    },
+    "authors": [
+        {
+            "name": "marcinwsieci",
+            "email": "marcin.kuzniecow@gmail.com"
+        }
+    ]
+}
