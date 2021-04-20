@@ -9713,6 +9713,7 @@ html, body {
 				color: #212121;
 				font-size: 1.125rem;
 				background: #f8f3ee;
+				font-weight: 100;
 }
 
 body.active {
@@ -9728,6 +9729,7 @@ h1 {
 h2 {
 				font-size: 1.5rem;
 				color: #9fbd37;
+				font-weight: 100;
 }
 
 p {
@@ -9892,6 +9894,16 @@ p {
 				color: #fff;
 }
 
+.site-footer .nav {
+				display: block;
+}
+
+@media (min-width: 768px) {
+				.site-footer .nav {
+								display: flex;
+				}
+}
+
 @media (min-width: 768px) {
 				.site-footer .nav li:first-of-type .nav-link {
 								margin-left: 0;
@@ -9911,6 +9923,7 @@ p {
 .site-footer .nav-item {
 				position: relative;
 				margin-right: .5rem;
+				display: inline-block;
 }
 
 .site-footer .nav-item::after {
@@ -9922,6 +9935,12 @@ p {
 
 .site-footer .nav-item:last-of-type::after {
 				content: none;
+}
+
+@media (max-width: 575.98px) {
+				.site-footer .nav-item:last-of-type .nav-link {
+								border-bottom: 0;
+				}
 }
 
 .site-main h2 {
@@ -9962,6 +9981,7 @@ p {
 .site-main ul li {
 				padding-left: 2.188rem;
 				position: relative;
+				font-size: 1rem;
 }
 
 .site-main ul li::before {
@@ -10019,6 +10039,7 @@ p {
 
 .wp-block-columns {
 				flex-wrap: wrap;
+				margin-bottom: 0;
 }
 
 @media (min-width: 1200px) {
@@ -10028,16 +10049,22 @@ p {
 }
 
 .wp-block-columns .wp-block-column {
-				flex-basis: 100%;
+				flex-basis: 100% !important;
 				flex-grow: 0;
 				flex-shrink: 0;
 				margin-left: 0;
-				margin-bottom: 2rem;
+				margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+				.wp-block-columns .wp-block-column {
+								margin-bottom: 2rem;
+				}
 }
 
 @media (min-width: 1200px) {
 				.wp-block-columns .wp-block-column {
-								flex-basis: 0;
+								flex-basis: 0 !important;
 								flex-grow: 1;
 								margin-bottom: 0;
 				}

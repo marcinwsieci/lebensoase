@@ -4,7 +4,7 @@ function lebensoase_header__before(){
     ?>
     <div class="container-fluid">
         <div class="row">
-            <div class="<?php if( is_front_page() ): ?>col-xl-6 px-0 d-flex align-items-between flex-column<?php else : ?>col-12 d-flex<?php endif; ?>">
+            <div class="<?php if( is_front_page() ): ?>col-xl-6 px-0 d-flex align-items-between flex-column<?php else : ?>col-12 d-flex px-0<?php endif; ?>">
                 <a class="header__logo-link" href="<?php echo home_url(); ?>">
                     <?php
                         if( has_custom_logo() ){
@@ -19,7 +19,7 @@ function lebensoase_header__before(){
                 </a>
                 <?php
                 if( is_front_page() )
-                    echo sprintf( '<h1>%s</h1>', __( 'Lerntherapie | Workshops | Eltern Coaching', 'lebensoase' ) );
+                    echo sprintf( '<h1 class="d-none d-md-inline-block">%s</h1>', __( 'Lerntherapie | Workshops | Eltern Coaching', 'lebensoase' ) );
                 else{
                     echo sprintf( '<h2 class="d-none d-md-inline-block ml-5 mt-4">%s<br/>%s</h2>',
                                     __( 'Sie sind hier:', 'lebensoase' ),

@@ -36,6 +36,7 @@ html, body{
     color: #212121;
     @include font-size(1.125rem);
     background: $background;
+    font-weight: 100;
 }
 
 body.active{
@@ -51,6 +52,7 @@ h1{
 h2{
     @include font-size(1.5rem);
     color: #9fbd37;
+    font-weight: 100;
 }
 
 p{
@@ -220,6 +222,10 @@ p{
     }
 
     .nav{
+        display: block;
+        @include media-breakpoint-up(md){
+            display: flex;
+        }
         li:first-of-type{
             @include media-breakpoint-up(md){
                 .nav-link{
@@ -240,6 +246,7 @@ p{
         &-item{
             position: relative;
             margin-right: .5rem;
+            display: inline-block;
             &::after{
                 content: '|';
                 position: absolute;
@@ -250,6 +257,11 @@ p{
             &:last-of-type{
                 &::after{
                     content: none;
+                }
+                .nav-link{
+                    @include media-breakpoint-down(xs){
+                        border-bottom: 0;
+                    }
                 }
             }
         }
@@ -290,6 +302,7 @@ p{
         li{
             padding-left: 2.188rem;
             position: relative;
+            @include font-size(1rem);
             &::before{
                 content: '';
                 width: .25rem;
@@ -354,17 +367,21 @@ p{
 
 .wp-block-columns{
     flex-wrap: wrap;
+    margin-bottom: 0;
     @include media-breakpoint-up(xl){
         flex-wrap: nowrap;
     }
     .wp-block-column{
-        flex-basis: 100%;
+        flex-basis: 100% !important;
         flex-grow: 0;
         flex-shrink: 0;
         margin-left: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        @include media-breakpoint-up(md){
+            margin-bottom: 2rem;
+        }
         @include media-breakpoint-up(xl){
-            flex-basis: 0;
+            flex-basis: 0 !important;
             flex-grow: 1;
             margin-bottom: 0;
 
