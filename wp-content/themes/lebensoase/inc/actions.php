@@ -67,7 +67,7 @@ function lebensoase_header__navbar(){
 
 function lebensoase_footer__before(){
     ?>
-    <div class="container-fluid px-0">
+    <div class="container-fluid px-0 px-md-3">
         <div class="row">
             <div class="col-12 px-0">
                 <?php echo sprintf( '<p class="mb-0">%s</p>', __( 'LebensOase by Verena, Beilngries-Leising', 'lebensoase' ) ); ?>
@@ -79,7 +79,7 @@ function lebensoase_footer__before(){
 
 function lebensoase_footer__after(){
     ?>
-    <div class="container-fluid px-0">
+    <div class="container-fluid px-0 px-md-3">
         <div class="row">
             <div class="col-12 mt-4 pt-2 px-0">
                 <?php echo sprintf( '<a href="%s" rel="nofollow" target="_blank">%s</a>',
@@ -96,7 +96,7 @@ function lebensoase_footer__after(){
 function lebensoase_footer__content(){
     if( has_nav_menu( 'footer' ) ){
         ?>
-        <div class="container-fluid px-0">
+        <div class="container-fluid px-0 px-md-3">
             <div class="row">
                 <?php
                 wp_nav_menu(
