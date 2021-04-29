@@ -50,9 +50,12 @@ h1{
 }
 
 h2{
-    @include font-size(1.5rem);
+
     color: #9fbd37;
     font-weight: 100;
+    @include media-breakpoint-up(md){
+        @include font-size(1.5rem);
+    }
 }
 
 p{
@@ -284,11 +287,14 @@ p{
 
 .site-main{
     h2{
-        @include font-size(2.813rem);
+
         color: #212121;
         font-weight: 100;
         position: relative;
         margin-bottom: 2.625rem;
+        @include media-breakpoint-up(md){
+            @include font-size(2.813rem);
+        }
         &::after{
             content: '';
             width: 8.75rem;
@@ -305,9 +311,12 @@ p{
     }
 
     h3{
-        @include font-size(1.5rem);
+        @include font-size(1.25rem);
         color: #9fbd37;
         margin-bottom: 2.5rem;
+        @include media-breakpoint-up(md){
+            @include font-size(1.5rem);
+        }
     }
 
     ul{
