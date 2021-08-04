@@ -325,7 +325,8 @@ p{
         li{
             padding-left: 2.188rem;
             position: relative;
-            @include font-size(1rem);
+            //@include font-size(1rem);
+            @include font-size(1.125rem);
             &::before{
                 content: '';
                 width: .25rem;
@@ -337,6 +338,10 @@ p{
                 top: .75rem;
             }
         }
+    }
+
+    b, strong{
+        font-weight: bold;
     }
 
     .content{

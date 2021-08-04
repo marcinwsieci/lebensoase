@@ -10023,7 +10023,7 @@ p {
 .site-main ul li {
 				padding-left: 2.188rem;
 				position: relative;
-				font-size: 1rem;
+				font-size: 1.125rem;
 }
 
 .site-main ul li::before {
@@ -10035,6 +10035,10 @@ p {
 				position: absolute;
 				left: 1rem;
 				top: .75rem;
+}
+
+.site-main b, .site-main strong {
+				font-weight: bold;
 }
 
 .site-main .content {
